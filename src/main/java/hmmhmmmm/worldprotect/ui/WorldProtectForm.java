@@ -7,18 +7,14 @@ import cn.nukkit.Player;
 import cn.nukkit.event.EventHandler;
 import cn.nukkit.event.Listener;
 import cn.nukkit.event.player.PlayerFormRespondedEvent;
-import cn.nukkit.event.server.DataPacketReceiveEvent;
-import cn.nukkit.network.protocol.ModalFormResponsePacket;
 import cn.nukkit.form.element.ElementButton;
 import cn.nukkit.form.element.ElementDropdown;
 import cn.nukkit.form.element.ElementInput;
 import cn.nukkit.form.element.ElementLabel;
 import cn.nukkit.form.element.ElementToggle;
-import cn.nukkit.form.element.ElementStepSlider;
 import cn.nukkit.form.window.FormWindowCustom;
 import cn.nukkit.form.window.FormWindowSimple;
 import cn.nukkit.item.Item;
-import cn.nukkit.level.Level;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -27,7 +23,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-public class WorldProtectForm implements Listener{
+public class WorldProtectForm implements Listener {
    private WorldProtect plugin;
    private Language lang;
    
@@ -43,6 +39,7 @@ public class WorldProtectForm implements Listener{
    }
    
    //รหัส id form หากมีปลั๊กอินอื่นใช้รหัสนี้ form มันจะทับกัน
+   // add: Thanks very clear comment :D
    static int MENU = 0xAAA101;
    static int WHITELIST = 0xAAA102;
    static int EDIT = 0xAAA103;
@@ -117,6 +114,7 @@ public class WorldProtectForm implements Listener{
       player.showFormWindow(window, EDIT);
    }
    
+   // Bad name. Rename it after
    public void Edit2(Player player, String worldname){
       FormWindowCustom window = new FormWindowCustom(
          getPrefix()+" Edit2 "+worldname

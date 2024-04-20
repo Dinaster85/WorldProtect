@@ -13,10 +13,7 @@ import cn.nukkit.event.entity.EntityExplodeEvent;
 import cn.nukkit.event.entity.EntityLevelChangeEvent;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Set;
 
 public class EntityListener implements Listener{
@@ -67,10 +64,11 @@ public class EntityListener implements Listener{
                      && player.getLevel().getFolderName().equals(worldname)
                      && plugin.getFlagBoolean(worldname, "pvp")
                   ){
+                     event.setCancelled(true);
+                     if (!plugin.getFlagBoolean(worldname, "show-message")) return;
                      damager.sendPopup(getPrefix()+" "+lang.getTranslate(
                        "listener.pvp.error1"
                      ));
-                     event.setCancelled(true);
                   }
                }
             }

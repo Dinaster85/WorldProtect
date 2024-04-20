@@ -21,10 +21,7 @@ import cn.nukkit.event.player.PlayerTeleportEvent;
 import cn.nukkit.item.Item;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Set;
 
 public class PlayerListener implements Listener{
@@ -55,10 +52,11 @@ public class PlayerListener implements Listener{
                && player.getLevel().getFolderName().equals(worldname)
                && plugin.getFlagBoolean(worldname, "bedenter")
             ){
+               event.setCancelled(true);
+               if (!plugin.getFlagBoolean(worldname, "show-message")) return;
                player.sendPopup(getPrefix()+" "+lang.getTranslate(
                   "listener.bedenter.error1"
                ));
-               event.setCancelled(true);
             }
          }
       }
@@ -77,10 +75,11 @@ public class PlayerListener implements Listener{
                && player.getLevel().getFolderName().equals(worldname)
                && plugin.getFlagBoolean(worldname, "bucketempty")
             ){
+               event.setCancelled(true);
+               if (!plugin.getFlagBoolean(worldname, "show-message")) return;
                player.sendPopup(getPrefix()+" "+lang.getTranslate(
                   "listener.bucketempty.error1"
                ));
-               event.setCancelled(true);
             }
          }
       }
@@ -99,10 +98,11 @@ public class PlayerListener implements Listener{
                && player.getLevel().getFolderName().equals(worldname)
                && plugin.getFlagBoolean(worldname, "bucketfill")
             ){
+               event.setCancelled(true);
+               if (!plugin.getFlagBoolean(worldname, "show-message")) return;
                player.sendPopup(getPrefix()+" "+lang.getTranslate(
                   "listener.bucketfill.error1"
                ));
-               event.setCancelled(true);
             }
          }
       }
@@ -121,10 +121,11 @@ public class PlayerListener implements Listener{
                && player.getLevel().getFolderName().equals(worldname)
                && plugin.getFlagBoolean(worldname, "chat")
             ){
+               event.setCancelled(true);
+               if (!plugin.getFlagBoolean(worldname, "show-message")) return;
                player.sendMessage(getPrefix()+" "+lang.getTranslate(
                   "listener.chat.error1"
                ));
-               event.setCancelled(true);
             }
          }
       }
@@ -150,11 +151,12 @@ public class PlayerListener implements Listener{
                      && player.getLevel().getFolderName().equals(worldname)
                      && message.startsWith(cmdList)
                   ){
+                     event.setCancelled(true);
+                     if (!plugin.getFlagBoolean(worldname, "show-message")) return;
                      player.sendMessage(getPrefix()+" "+lang.getTranslate(
                         "listener.bancmd.error1",
                         new String[]{message}
                      ));
-                     event.setCancelled(true);
                   }
                }
             }
@@ -199,10 +201,11 @@ public class PlayerListener implements Listener{
                && player.getLevel().getFolderName().equals(worldname)
                && plugin.getFlagBoolean(worldname, "eatfood")
             ){
+               event.setCancelled(true);
+               if (!plugin.getFlagBoolean(worldname, "show-message")) return;
                player.sendPopup(getPrefix()+" "+lang.getTranslate(
                   "listener.eatfood.error1"
                ));
-               event.setCancelled(true);
             }
          }
       }
@@ -236,10 +239,11 @@ public class PlayerListener implements Listener{
                && player.getLevel().getFolderName().equals(worldname)
                && plugin.getFlagBoolean(worldname, "item-drop")
             ){
+               event.setCancelled(true);
+               if (!plugin.getFlagBoolean(worldname, "show-message")) return;
                player.sendPopup(getPrefix()+" "+lang.getTranslate(
                   "listener.item-drop.error1"
                ));
-               event.setCancelled(true);
             }
          }
       }
@@ -260,10 +264,11 @@ public class PlayerListener implements Listener{
                && player.getLevel().getFolderName().equals(worldname)
                && plugin.getFlagBoolean(worldname, "interact")
             ){
+               event.setCancelled(true);
+               if (!plugin.getFlagBoolean(worldname, "show-message")) return;
                player.sendPopup(getPrefix()+" "+lang.getTranslate(
                   "listener.interact.error1"
                ));
-               event.setCancelled(true);
             }
          }
          if(plugin.isFlag(worldname, "banitem")){
@@ -284,11 +289,12 @@ public class PlayerListener implements Listener{
                      && item.getId() == id 
                      && item.getDamage() == damage
                   ){
+                     event.setCancelled(true);
+                     if (!plugin.getFlagBoolean(worldname, "show-message")) return;
                      player.sendPopup(getPrefix()+" "+lang.getTranslate(
                         "listener.banitem.error1",
                         new String[]{item.getName()}
                      ));
-                     event.setCancelled(true);
                   }
                }
             }
@@ -309,10 +315,11 @@ public class PlayerListener implements Listener{
                && player.getLevel().getFolderName().equals(worldname)
                && plugin.getFlagBoolean(worldname, "move")
             ){
+               event.setCancelled(true);
+               if (!plugin.getFlagBoolean(worldname, "show-message")) return;
                player.sendPopup(getPrefix()+" "+lang.getTranslate(
                   "listener.move.error1"
                ));
-               event.setCancelled(true);
             }
          }
       }
@@ -331,10 +338,11 @@ public class PlayerListener implements Listener{
                && player.getLevel().getFolderName().equals(worldname)
                && plugin.getFlagBoolean(worldname, "teleport")
             ){
+               event.setCancelled(true);
+               if (!plugin.getFlagBoolean(worldname, "show-message")) return;
                player.sendPopup(getPrefix()+" "+lang.getTranslate(
                   "listener.teleport.error1"
                ));
-               event.setCancelled(true);
             }
          }
       }

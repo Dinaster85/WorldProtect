@@ -12,10 +12,7 @@ import cn.nukkit.event.block.BlockPlaceEvent;
 import cn.nukkit.event.block.ItemFrameDropItemEvent;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Set;
 
 public class BlockListener implements Listener{
@@ -47,10 +44,11 @@ public class BlockListener implements Listener{
                && player.getLevel().getFolderName().equals(worldname)
                && plugin.getFlagBoolean(worldname, "break")
             ){
+               event.setCancelled(true);
+               if (!plugin.getFlagBoolean(worldname, "show-message")) return;
                player.sendPopup(getPrefix()+" "+lang.getTranslate(
                   "listener.blockbreak.error1"
                ));
-               event.setCancelled(true);
             }
          }
       }
@@ -70,10 +68,11 @@ public class BlockListener implements Listener{
                && player.getLevel().getFolderName().equals(worldname)
                && plugin.getFlagBoolean(worldname, "place")
             ){
+               event.setCancelled(true);
+               if (!plugin.getFlagBoolean(worldname, "show-message")) return;
                player.sendPopup(getPrefix()+" "+lang.getTranslate(
                   "listener.blockplace.error1"
                ));
-               event.setCancelled(true);
             }
          }
       }
@@ -93,10 +92,11 @@ public class BlockListener implements Listener{
                && player.getLevel().getFolderName().equals(worldname) 
                && plugin.getFlagBoolean(worldname, "itemframe-drop")
             ){
+               event.setCancelled(true);
+               if (!plugin.getFlagBoolean(worldname, "show-message")) return;
                player.sendPopup(getPrefix()+" "+lang.getTranslate(
                   "listener.itemframedrop.error1"
                ));
-               event.setCancelled(true);
             }
          }
       }

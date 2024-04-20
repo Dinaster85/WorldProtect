@@ -3,7 +3,6 @@ package hmmhmmmm.worldprotect.listener;
 import hmmhmmmm.worldprotect.WorldProtect;
 import hmmhmmmm.worldprotect.data.Language;
 
-import cn.nukkit.Player;
 import cn.nukkit.level.Level;
 import cn.nukkit.event.EventHandler;
 import cn.nukkit.event.Listener;
@@ -11,11 +10,6 @@ import cn.nukkit.event.level.LevelLoadEvent;
 import cn.nukkit.event.level.ThunderChangeEvent;
 import cn.nukkit.event.level.WeatherChangeEvent;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Set;
 
 public class LevelListener implements Listener{

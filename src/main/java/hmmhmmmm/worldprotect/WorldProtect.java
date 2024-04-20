@@ -9,10 +9,7 @@ import hmmhmmmm.worldprotect.listener.LevelListener;
 import hmmhmmmm.worldprotect.listener.PlayerListener;
 import hmmhmmmm.worldprotect.ui.WorldProtectForm;
 
-import cn.nukkit.command.Command;
-import cn.nukkit.event.Listener;
 import cn.nukkit.plugin.PluginBase;
-import cn.nukkit.plugin.Plugin;
 import cn.nukkit.utils.Config;
 
 import java.io.File;
@@ -20,7 +17,6 @@ import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.HashMap;
 import java.util.TreeMap;
 import java.util.Map;
 import java.util.Set;
@@ -36,7 +32,8 @@ public class WorldProtect extends PluginBase{
    
    private List<String> langClass = Arrays.asList(
       "english",
-      "thai"
+      "thai",
+      "russian"
    );
    
    public Map<String, String> eventMap = new TreeMap<String, String>();
@@ -147,7 +144,8 @@ public class WorldProtect extends PluginBase{
          "eatfood:"+getLanguage().getTranslate("event.eatfood"),
          "food:"+getLanguage().getTranslate("event.food"),
          "teleport:"+getLanguage().getTranslate("event.teleport"),
-         "itemframe-drop:"+getLanguage().getTranslate("event.itemframe-drop")
+         "itemframe-drop:"+getLanguage().getTranslate("event.itemframe-drop"),
+         "show-message:"+getLanguage().getTranslate("afterevent.show-message")
       );
       return listBoolean;
    }
@@ -183,6 +181,7 @@ public class WorldProtect extends PluginBase{
       data.set("worlds."+name+".food", false);
       data.set("worlds."+name+".teleport", false);
       data.set("worlds."+name+".itemframe-drop", false);
+      data.set("worlds."+name+".show-message", true);
       data.set("worlds."+name+".banitem", new ArrayList<String>());
       data.set("worlds."+name+".bancmd", new ArrayList<String>());
       data.save();
