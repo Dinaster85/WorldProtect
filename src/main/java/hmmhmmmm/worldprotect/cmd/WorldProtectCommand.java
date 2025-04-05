@@ -269,7 +269,7 @@ public class WorldProtectCommand extends Command{
             if(!plugin.isFlag(name, "bancmd")){
                plugin.resetFlagList(name, "bancmd");
             }
-            cmd = String.join(" ", Arrays.copyOfRange(args, 2, args.length));
+            cmd = String.join(" ", Arrays.copyOfRange(args, 2, args.length)).toLowerCase();
             cmdLists = new ArrayList<String>(plugin.getFlagList(name, "bancmd"));
             if(cmdLists.contains(cmd)){
                sender.sendMessage(getPrefix()+" "+lang.getTranslate(

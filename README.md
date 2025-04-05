@@ -1,5 +1,7 @@
 ## WorldProtect
 
+# THIS PLUGIN CREATED BY [HmmHmmmm](https://github.com/HmmHmmmm/)
+
 
 [Language English](#english)
 
@@ -16,7 +18,7 @@ Download WorldProtect.jar https://nukkitx.com/resources/worldprotect.400/
 - Have ban cmd
 - Have whitelist
 - Have gui form
-- Have language thai and english (You can edit the language you don't like at, `/resources/language`)
+- Have language thai, english and russian (You can edit the language you don't like at, `/resources/language`)
 
 
 **Event**<br>
@@ -40,6 +42,7 @@ Download WorldProtect.jar https://nukkitx.com/resources/worldprotect.400/
 - food (Esophageal player do not reduce)
 - teleport (Player teleport)
 - itemframe-drop (Item frame fall)
+- show-message (show WorldProtect message on actionbar)
 
 
 **How to use**<br>
@@ -51,11 +54,11 @@ Download WorldProtect.jar https://nukkitx.com/resources/worldprotect.400/
 
 
 **Images**<br>
-![1](https://github.com/HmmHmmmm/WorldProtect/blob/master/images/2.0/1.jpg)
+![1](https://github.com/Dinaster85/WorldProtect/blob/master/images/2.0/1.jpg)
 
-![2](https://github.com/HmmHmmmm/WorldProtect/blob/master/images/2.0/2.jpg)
+![2](https://github.com/Dinaster85/WorldProtect/blob/master/images/2.0/2.jpg)
 
-![3](https://github.com/HmmHmmmm/WorldProtect/blob/master/images/2.0/3.jpg)
+![3](https://github.com/Dinaster85/WorldProtect/blob/master/images/2.0/3.jpg)
 
 
 # Config
@@ -63,6 +66,7 @@ Download WorldProtect.jar https://nukkitx.com/resources/worldprotect.400/
 #Language
 #thai=ภาษาไทย
 #english=English language
+#russian=Русский
 language: english
 ```
   

@@ -43,7 +43,7 @@ public class Language {
          "event.food",
          "event.teleport",
          "event.itemframe-drop",
-         "afterevent.show-message",
+         "event.show-message",
          "worldprotect.command.consoleError",
          "worldprotect.command.permissionError",
          "worldprotect.command.sendHelp.empty",
@@ -300,7 +300,7 @@ public class Language {
          "§fcommand"
    };
 
-   // Добавлю переводы позже
+
    private String[] langRussian = new String[] {
          "§cЭтот плагин не будет работать, пожалуйста установите плагин %1",
          "§fИмя плагина %1",
@@ -473,7 +473,7 @@ public class Language {
          "ผู้เล่นกินอาหาร",
          "ผู้เล่นหลอดอาหารไม่ลด",
          "ผู้เล่นวาร์ป",
-         "Показать сообщение о запрете действия", // sorry i dont know this language and not want use translator bad translate. please translate correct
+         "Show message about acces denied", // sorry i dont know this language and not want use translator bad translate. please translate correct
          "ไอเทมโชว์ตก",
          "§cขออภัย: คำสั่งสามารถพิมพ์ได้เฉพาะในเกมส์",
          "§cขออภัย: คุณไม่สามารถพิมพ์คำสั่งนี้ได้",

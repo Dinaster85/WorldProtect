@@ -145,7 +145,7 @@ public class WorldProtect extends PluginBase{
          "food:"+getLanguage().getTranslate("event.food"),
          "teleport:"+getLanguage().getTranslate("event.teleport"),
          "itemframe-drop:"+getLanguage().getTranslate("event.itemframe-drop"),
-         "show-message:"+getLanguage().getTranslate("afterevent.show-message")
+         "show-message:"+getLanguage().getTranslate("event.show-message")
       );
       return listBoolean;
    }
