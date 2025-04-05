@@ -149,7 +149,7 @@ public class PlayerListener implements Listener{
                   );
                   if(!whitelist.contains(player.getName().toLowerCase())
                      && player.getLevel().getFolderName().equals(worldname)
-                     && message.startsWith(cmdList)
+                     && message.toLowerCase().startsWith(cmdList)
                   ){
                      event.setCancelled(true);
                      if (!plugin.getFlagBoolean(worldname, "show-message")) return;

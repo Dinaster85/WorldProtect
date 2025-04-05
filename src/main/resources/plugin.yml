@@ -1,9 +1,9 @@
 name: "${pom.artifactId}"
 main: hmmhmmmm.worldprotect.WorldProtect
-author: "HmmHmmmm"
+author: "HmmHmmmm, Dinaster85"
 version: "${pom.version}"
 api: ["1.0.9"]
-website: https://github.com/HmmHmmmm/WorldProtect
+website: https://github.com/Dinaster85/WorldProtect
 
 permissions:
   worldprotect:

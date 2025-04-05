@@ -420,7 +420,7 @@ public class WorldProtectForm implements Listener {
             String title = window.getTitle();
             String[] arr = title.split(" ");
             String name = arr[2];
-            String cmd = window.getResponse().getInputResponse(2);
+            String cmd = window.getResponse().getInputResponse(2).toLowerCase();
             String content = window.getResponse().getLabelResponse(0);
             List<String> cmdLists = new ArrayList<String>(plugin.getFlagList(
                name,
